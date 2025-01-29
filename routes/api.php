@@ -22,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/chat', [ChatController::class, 'chat']);
 Route::get('chat/history/{sessionId}', [ChatController::class, 'getChatHistory']);
+Route::get('/chat/sessions', [ChatController::class, 'getDistinctSessionIds']);
 
